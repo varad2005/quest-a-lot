@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useAuthStore } from '@/store/authStore';
 import { PenSquare, User, LogOut, Shield } from 'lucide-react';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -44,6 +45,7 @@ export const Header = () => {
         </nav>
 
         <div className="flex items-center space-x-4">
+          <ThemeToggle />
           {isAuthenticated ? (
             <>
               <Button
